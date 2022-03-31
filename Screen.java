@@ -11,11 +11,11 @@ public class Screen extends JFrame{
 		setVisible(true);
 	}
 	public static void main(String[] args) {
-		/*
+		
 		new Screen(Picture.bishop().negative().
-				join(Picture.alfil())
+				join(Picture.rock())
 				);
-		*/
+		
 	}
 
 }
