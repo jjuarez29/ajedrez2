@@ -66,25 +66,18 @@ public class Picture implements Iterable<String>{
 	 * @return a new Picture, the vertical mirror.
 	 */
 	public Picture verticalMirror(){
-		//Sy+++++++++++
-	/*	
 		String [] img2 = new String[58];
-		String [] img3 = new String[58];
-		PrintStream o = new PrintStream(new File("A.txt"));
- 		System.setErr(o);
-		System.err.println(img);
+		//PrintStream o = new PrintStream(new File("A.txt"));
+ 		//System.setErr(o);
+		//System.err.println(img);
 		int k;
 		k=57;
 		for(int i = 0; i < 57; i++){
-			String img3='';
-            img3=img[k];
-			//img2[] 
-
 			img2[i]=img[k];
 			k=k-1;
 			}
-			 Error vertical mirror  tipo de datos
-			*/
+			// Error vertical mirror  tipo de datos
+		
 		return new Picture(img);
 	}
 /*
