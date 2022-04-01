@@ -14,6 +14,7 @@ public class Screen extends JFrame{
 		this.pic = new GPicture(pic);
 		setSize(this.pic.getWidth() + 5, this.pic.getHeight() + 28);
 		getContentPane().add(this.pic);
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 	}
@@ -21,11 +22,12 @@ public class Screen extends JFrame{
 
 	public static void main(String[] args) {
 	
-		new Screen(Picture.knight().negative().horizontalMirror().
+		new Screen( ((Picture.knight()).negative()));
+		/*horizontalMirror().
 				join(Picture.rock()));
-						
+		*/				
 
-		new Screen(Picture.knight().
+		new Screen(Picture.knight().verticalMirror().
 				join(Picture.rock()	));
 								
 

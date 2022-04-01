@@ -22,7 +22,8 @@ public class Picture implements Iterable<String>{
 		for(String s: img)
 			width = Math.max(width, s.length());
 	}
-	
+	/*
+	Estaban mal codigo
 	private byte invColor(byte c){
 		byte ic;
 		switch (c) {
@@ -34,7 +35,7 @@ public class Picture implements Iterable<String>{
 		}
 		return ic;
 	}
-	
+	*/
 	private char invColor2(char c){
 		char ic;
 		switch (c) {
@@ -47,11 +48,12 @@ public class Picture implements Iterable<String>{
 		}
 		return ic;
 	}
-	
+/*	
 	private byte overlay(byte c1, byte c2){
 		if(c1 == ' ') return c2;
 		return c1;
 	}
+	*/
 	
 	public int getWidth() {
 		return width;
