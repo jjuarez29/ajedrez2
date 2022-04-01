@@ -8,7 +8,9 @@ public class Screen extends JFrame{
 		setSize(this.pic.getWidth() + 5, this.pic.getHeight() + 28);
 		getContentPane().add(this.pic);
 		
+		this.pic.setLocation(300, 120);
 		this.pic = new GPicture(pic);
+		
 		setSize(this.pic.getWidth() + 5, this.pic.getHeight() + 28);
 		getContentPane().add(this.pic);
 
