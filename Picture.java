@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Iterator;
+import java.lang.System;
 /**
  * 
  * @author Alfredo Paz
@@ -19,6 +20,7 @@ public class Picture implements Iterable<String>{
 		this.img = img;
 		length = this.img.length;
 		for(String s: img)
+		
 			width = Math.max(width, s.length());
 	}
 	
@@ -60,9 +62,23 @@ public class Picture implements Iterable<String>{
 	 * @return a new Picture, the horizontal mirror.
 	 */
 	public Picture horizontalMirror(){
+		//System.out.println(img[20]);
+		int x = getHeight()-1;
+        int z = getWidth();
+        int k;
+        k=0;        
+         for (int i=0 ;i < x; i++){
+          String  str=img[i];
+              img[i]=""; 
+              k=0;
+            for (int n = str.length() -1; n >= 0; n--) { 
+              char c = str.charAt(n); 
+              img[i]=img[i]+c;
+            k=k+1;};       
+			}
 		return new Picture(img);
 	}
-	
+	 
 
 	/**
 	 * Negative Color
