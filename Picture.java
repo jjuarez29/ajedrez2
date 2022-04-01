@@ -35,6 +35,19 @@ public class Picture implements Iterable<String>{
 		return ic;
 	}
 	
+	private char invColor2(char c){
+		char ic;
+		switch (c) {
+		case '_': ic = '='; break;
+		case '=': ic = '_'; break;
+		case '.': ic = '@'; break;
+		case '@': ic = '.'; break;
+		case ' ': ic = '_'; break;
+		default: ic = c; break;
+		}
+		return ic;
+	}
+	
 	private byte overlay(byte c1, byte c2){
 		if(c1 == ' ') return c2;
 		return c1;
@@ -72,7 +85,7 @@ public class Picture implements Iterable<String>{
 			}
 			 Error vertical mirror  tipo de datos
 			*/
-		return new Picture(img2);
+		return new Picture(img);
 	}
 /*
 	String [] img2 = new String[58];
@@ -112,13 +125,23 @@ public class Picture implements Iterable<String>{
 	 * @return a new Picture, the negative color.
 	 */
 	public Picture negative(){
-		byte id='=';
 		//case '_': ic = '='; break;
 		//case '=': ic = '_'; break;
 		//case '.': ic = '@'; break;
 		//case '@': ic = '.'; break;
+		int x = getHeight()-1;
+        //k=0;        
+         for (int i=0 ;i < x; i++){
+          String  str=img[i];
+              img[i]=""; 
+          //    k=0;
+            for (int n = 0; n < str.length(); n++) { 
+              char c = str.charAt(n);
+			  img[i]=img[i]+invColor2(c);
+            ///k=k+1;};       
+			}
+		}
 
-		invColor(id );
 		return new Picture(img);
 	}
 	

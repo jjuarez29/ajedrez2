@@ -27,7 +27,7 @@ public class Screen extends JFrame{
 				join(Picture.rock()));
 						
 
-		new Screen(Picture.knight().verticalMirror().
+		new Screen(Picture.knight().
 				join(Picture.rock()	));
 								
 
