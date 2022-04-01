@@ -20,7 +20,6 @@ public class Picture implements Iterable<String>{
 		this.img = img;
 		length = this.img.length;
 		for(String s: img)
-		
 			width = Math.max(width, s.length());
 	}
 	
@@ -54,9 +53,37 @@ public class Picture implements Iterable<String>{
 	 * @return a new Picture, the vertical mirror.
 	 */
 	public Picture verticalMirror(){
-		return new Picture(img);
+		//Sy+++++++++++
+	/*	
+		String [] img2 = new String[58];
+		String [] img3 = new String[58];
+		PrintStream o = new PrintStream(new File("A.txt"));
+ 		System.setErr(o);
+		System.err.println(img);
+		int k;
+		k=57;
+		for(int i = 0; i < 57; i++){
+			String img3='';
+            img3=img[k];
+			//img2[] 
+
+			img2[i]=img[k];
+			k=k-1;
+			}
+			 Error vertical mirror  tipo de datos
+			*/
+		return new Picture(img2);
 	}
-	
+/*
+	String [] img2 = new String[58];
+		for(int i = 0; i < img.length; i++){
+			char[] line = new char[58];
+			for(int j = 0; j < img.length; j++)
+				line[j] = '_';
+			img[i] = new String(line);
+		}
+		return new Picture(img);
+*/	
 	/**
 	 * Horizontal Mirror Image
 	 * @return a new Picture, the horizontal mirror.
@@ -85,6 +112,13 @@ public class Picture implements Iterable<String>{
 	 * @return a new Picture, the negative color.
 	 */
 	public Picture negative(){
+		byte id='=';
+		//case '_': ic = '='; break;
+		//case '=': ic = '_'; break;
+		//case '.': ic = '@'; break;
+		//case '@': ic = '.'; break;
+
+		invColor(id );
 		return new Picture(img);
 	}
 	
